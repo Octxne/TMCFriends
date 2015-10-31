@@ -1,7 +1,5 @@
 package me.octxne.tmcfriends.listeners;
 
-import java.util.ArrayList;
-
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -16,12 +14,6 @@ public class PlayerJoinListener implements Listener
 	public void onPlayerJoin(PlayerJoinEvent event)
 	{
 		Player player = event.getPlayer();
-		
-		if (!PlayersFile.getFile().getConfiguration().contains("tmcfriends.players." + player.getUniqueId() + ".friends"))
-		{
-			PlayersFile.getFile().getConfiguration().set("tmcfriends.players." + player.getUniqueId() + ".friends", new ArrayList<String>());
-			PlayersFile.getFile().saveConfiguration();
-		}
 		
 		if (PlayersFile.getFile().getConfiguration().contains("tmcfriends.players." + player.getUniqueId() + ".name"))
 		{
