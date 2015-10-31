@@ -1,0 +1,10 @@
+name: TMCFriends
+version: 0.1
+main: me.octxne.tmcfriends.core.TMCFriends
+author: Octxne
+description: TMCFriends is a friends plugin developed by Octxne for a server called TMCNetwork.
+
+commands:
+  friend:
+  friends:
+  unfriend:
